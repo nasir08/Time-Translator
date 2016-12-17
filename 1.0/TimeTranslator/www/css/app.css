@@ -1,0 +1,363 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+
+/* This file is completely optional and not required. */
+/* Note the reference that includes it in the index.html file. */
+
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+* {
+        	margin: 0;
+        	padding: 0;
+        }
+
+body {
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: #F5F5EE ;
+    color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #402060;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav #item {
+    height: 10%;
+    padding-left:32px;
+    padding-top: 4%;
+}
+
+.sidenav #item:hover, .sidenav #item:focus{
+    background-color: #261339;
+}
+
+#item #current{
+    margin-top: -20%;
+    float: right;
+    width: 3%;
+    height: 120%;
+    background-color: #FEE600;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.offcanvas a:focus{
+    color: #696969;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #FEE600;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    text-align: center;
+}
+
+#main h2{
+    color:black;
+}
+
+#banner {
+    background-color: #D64937;
+    height: 60px;
+    padding: 10px 0 10px 10px;
+    border-radius: 1px;
+    border: 0px solid groove;
+}
+
+#banner #left{
+    float: left;
+    width: 40%;
+}
+#banner #right{
+    float:right;
+    width: 60%;
+    text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.button {
+    background-color: #D64937;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 90%;
+    border-radius: 8px;
+}
+
+.button2:focus {
+    outline: none:
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#clock {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin: auto;
+  position: relative;
+}
+#clock div,
+.faceBox {
+  border: 0;
+  position: absolute;
+  transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  transform: rotate(0deg);
+}
+#clock #hour {
+  border-radius: 0.75em 0.75em 0 0;
+  width: 1.5em;
+  height: 6em;
+  top: 9em;
+  left: 14.25em;
+  background-color: black;
+}
+#clock #minute {
+  border-radius: 0.5em;
+  width: 1em;
+  height: 11em;
+  top: 4em;
+  left: 14.5em;
+  background-color: black;
+}
+#clock #second {
+  border-radius: 0.25em;
+  width: 0.5em;
+  height: 14em;
+  top: 1em;
+  left: 14.75em;
+  background-color: black;
+}
+#clock #center {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  top: 14em;
+  left: 14em;
+  transform: rotate(0deg);
+  background-color: black;
+}
+.smallTick {
+  width: 0.1em;
+  height: 0.5em;
+  background-color: black;
+  margin: 0 1.45em;
+}
+.mediumTick {
+  width: 0.25em;
+  height: 0.8em;
+  background-color: black;
+  margin: 0 1.375em;
+}
+.largeTick {
+  width: 0.4em;
+  height: 0.8em;
+  background-color: black;
+  position: relative;
+  margin: 0 1.3em;
+}
+.tickNum {
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  line-height: 0;
+  color: black;
+  position: relative;
+  top: 1em;
+  left: 0;
+  padding: 0 0.5em;
+}
+div.faceBox {
+  border: 0;
+  width: 3em;
+  height: 15em;
+  top: 0;
+  left: 13.5em;
+  position: absolute;
+  text-align: center;
+  overflow: visible;
+}
+#clear {
+    padding-top: 10%;
+}
+#TextSpace {
+    padding-top: 10%;
+    text-align: center;
+    font-size: 16px;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+    visibility: hidden;
+}
+.float:focus{
+    outline:none;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+label
+{
+    color: black
+}
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  width       : 1em;
+  color       : rgb(153,204,102);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+
+input[type=radio]:not(old):checked + label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}
+
+
+.aboutBox{
+    color: black;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+.reportBox{
+    color: black;
+    padding: 10px 30px 10px 30px;
+}

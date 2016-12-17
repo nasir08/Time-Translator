@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/float-design.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <link rel="stylesheet" href="css/app.css">
+    <script src="cordova.js" id="xdkJScordova_"></script>
+
+    <script src="js/app.js"></script>           <!-- for your event code, see README and file comments for details -->
+    <script src="js/init-app.js"></script>      <!-- for your init code, see README and file comments for details -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
+</head>
+
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="item"><a href="index.html">Home</a><div id="current"></div></div>
+        <div id="item"><a href="report.html">Report A Problem</a></div>
+        <div id="item"><a href="about.html">About</a></div>
+    </div>
+    <div id="banner">
+        <div id="left"><span style="font-size:30px;cursor:pointer;float:left;color:white" onclick="openNav()">&#9776;</span></div>
+        <div id="center"><span style="font-size:30px;">Home</span></div>
+    </div>
+    <div id="main">
+        <h2>Select A Language</h2>
+        <button class="button button2" onclick="location.href='french.html'">French</button>
+        <button class="button button2" onclick="location.href='english.html'">English</button>
+        <button class="button button2" onclick="location.href='yoruba.html'">Yoruba</button>
+        <br><br>
+        <div style="visibility:hidden">
+            <input id="option" type="checkbox" name="field" value="option">
+            <label for="option"><span><span></span></span>Remember My Selection</label>
+        </div>
+    </div>
+    <div>
+    <a href="#" class="float" data-toggle="modal" data-target="#myModal">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+    
+    
+    
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+        <div class="modal-body">
+        <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
